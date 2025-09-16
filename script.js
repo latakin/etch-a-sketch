@@ -1,14 +1,15 @@
-
+// created my global variables
 const gridSize = document.querySelector("#gridsize");
 const sketchButton = document.querySelector("#enter");
 const container = document.querySelector(".main-container");
 
+// show 16 by 16 grid on page load
 document.addEventListener('DOMContentLoaded', ()=> {
     createDiv(16);
 })
  
 
-
+// create grid with users input and validate input
 sketchButton.addEventListener("click", ()=> {
     const size = prompt('how many squares do you want? min =1, max= 100');
     if (size > 100 || size === "" || size === 0 || isNaN(size)) {
@@ -20,7 +21,8 @@ sketchButton.addEventListener("click", ()=> {
     }
 
 })
-    
+
+// creates the div with mouseover and mouseout events
 function createDiv(size) {
     for(i = 0; i < size; i++) {
         const rowDiv = document.createElement('div');
