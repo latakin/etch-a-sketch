@@ -1,0 +1,25 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vh;
+    height: auto;
+    max-height: 80vh;
+    box-sizing: border-box;
+}
+.rowdiv {
+    display: flex;
+    flex: 1;
+    border: 1px solid #333;
+}
+
+.coldiv {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    min-width: 8px;
+    min-height: 8px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
