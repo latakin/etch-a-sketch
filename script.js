@@ -1,3 +1,4 @@
+
 const gridSize = document.querySelector("#gridsize");
 const sketchButton = document.querySelector("#enter");
 const container = document.querySelector(".main-container");
@@ -9,9 +10,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 
 sketchButton.addEventListener("click", ()=> {
-    const size = prompt('how many squares do you want? ')
+    const size = prompt('how many squares do you want? min =1, max= 100');
+    if (size > 100 || size === "" || size === 0 || isNaN(size)) {
+        alert('Minimum is 1 and Maximum is 100');
+    }
+    else {
     container.innerHTML = " ";
     createDiv(size)
+    }
 
 })
     
@@ -30,6 +36,12 @@ function createDiv(size) {
                 ${Math.floor(Math.random() * 255)},
                 ${Math.floor(Math.random() * 255)}
                 )`
+             })
+
+             divs.addEventListener('mouseout', ()=> {
+                setTimeout(()=> {
+                    divs.style.backgroundColor = 'white';
+                }, 1000)
              })
              rowDiv.appendChild(divs);
             ;

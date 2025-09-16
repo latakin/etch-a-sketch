@@ -1,3 +1,14 @@
+body {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
 .main-container {
     display: flex;
     flex-direction: column;
@@ -6,6 +17,7 @@
     height: auto;
     max-height: 80vh;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 .rowdiv {
     display: flex;
@@ -22,5 +34,13 @@
     border: 1px solid #333;
     box-sizing: border-box;
     cursor: pointer;
+}
+
+#enter {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
